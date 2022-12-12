@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "../src/app/shared/styles/variables";
+
+body::-webkit-scrollbar {
+  z-index: -1;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: $secondaryColor;
+}

@@ -1,0 +1,172 @@
+@import "../../../shared/styles/variables";
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  width: 99%;
+  height: 60px;
+  margin: 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  &__side-menu-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 90%;
+    background: url(../../../../assets/icons/header/apps.svg);
+    background-color: $mainColor;
+    background-repeat: no-repeat;
+    background-size: 35%;
+    background-position: center;
+    box-shadow: 0px 2px 6px 0px lightgrey;
+    transition: box-shadow 0.3s;
+    &:hover {
+      box-shadow: 0px 0px transparent;
+    }
+    &:active {
+      background-size: 33%;
+    }
+  }
+  &__main-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    height: 90%;
+    background-color: $mainColor;
+    box-shadow: 0px 2px 6px 0px lightgrey;
+    &__user {
+      &__img {
+        border: 3px solid white;
+        border-radius: 50%;
+        background: url(../../../../assets/icons/header/user.svg);
+      }
+    }
+    &__balance {
+      &__img {
+        background: url(../../../../assets/icons/header/wallet.svg);
+      }
+    }
+    &__expenses {
+      &__img {
+        background: url(../../../../assets/icons/header/bill.svg);
+      }
+    }
+    &__date {
+      &__img {
+        background: url(../../../../assets/icons/header/calendar-alt.svg);
+      }
+    }
+    &__user,
+    &__balance,
+    &__expenses,
+    &__date {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      min-width: 20%;
+      width: auto;
+      height: 100%;
+      //   border: 1px solid white;
+      padding: 2px;
+      &__img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      span {
+        margin-left: 3px;
+      }
+    }
+    &__user {
+      &__img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    height: auto;
+    &__side-menu-btn {
+      width: 100px;
+      height: 88px;
+    }
+    &__main-info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 5px;
+      &__user,
+      &__balance,
+      &__expenses,
+      &__date {
+        width: 50%;
+        height: 50%;
+      }
+      &__expenses {
+        order: 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 16px;
+    &__side-menu-btn {
+      width: 88px;
+      height: 88px;
+    }
+    &__main-info {
+      min-width: 235px;
+      flex-flow: row wrap;
+      margin: 0 auto;
+      &__user,
+      &__balance,
+      &__expenses,
+      &__date {
+        width: 50%;
+      }
+    }
+  }
+}
+@media (max-width: 512px) {
+  .header {
+    flex-flow: column nowrap;
+    align-items: center;
+    &__side-menu-btn {
+      min-width: 235px;
+      width: 80%;
+      height: 40px;
+      margin-bottom: 5px;
+      background-size: 10%;
+    }
+    &__main-info {
+      min-width: 235px;
+      flex-flow: row wrap;
+      margin: 0 auto;
+      &__user,
+      &__balance,
+      &__expenses,
+      &__date {
+        align-items: center;
+        width: 100%;
+      }
+      &__expenses {
+        order: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.main-block {
+  display: flex;
+  margin: 70px 20px;
+  min-height: 64.8vh;
+}
+@media (max-width: 1920px) {
+  .main-block {
+    min-height: 82.3vh;
+  }
+}
+@media (max-width: 1366px) {
+  .main-block {
+    min-height: 71.2vh;
+  }
+}
+@media (max-width: 960px) {
+  .main-block {
+    margin-top: 100px;
+    min-height: 59.2vh;
+  }
+}
+@media (max-width: 512px) {
+  .main-block {
+    margin-top: 220px;
+    min-height: 47vh;
+  }
+}
